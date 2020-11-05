@@ -6,7 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "set-domain": "echo \"www.chase.earth\" > dist/_nuxt/static/CNAME",
+    "set-domain": "echo \"www.chase.earth\" > static/CNAME",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
