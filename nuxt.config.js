@@ -3,7 +3,7 @@ export default {
   target: 'static',
   router: {
     base: '/chase-2020/'
-  }
+  },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
