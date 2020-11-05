@@ -28,7 +28,15 @@
 </template>
 
 <script>
-export default {}
+import pageMixin from '~/mixins/page-mixin.vue'
+
+export default {
+  mixins: [pageMixin],
+
+  data: () => ({
+    title: 'hero there',
+  }),
+}
 </script>
 
 <style lang="scss">
