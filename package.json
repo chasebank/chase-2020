@@ -6,9 +6,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
     "set-domain": "echo \"www.chase.earth\" > dist/_nuxt/static/CNAME",
-    "generate-gh": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
