@@ -11,9 +11,15 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "^3.6.5",
+    "normalize.css": "^8.0.1",
     "nuxt": "^2.14.6",
     "push-dir": "^0.4.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "fibers": "^5.0.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.0.5"
+  }
 }
