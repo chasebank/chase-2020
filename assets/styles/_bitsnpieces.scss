@@ -1,1 +1,61 @@
-$color: white;
+$smallScreen: 550px;
+$mediumScreen: 1024px;
+$largeScreen: 1600px;
+
+// $largePadding: calc(4vw + 2rem);
+// $mediumPadding: calc(2vw + 1.5rem);
+// $smallPadding: calc(1% + 1rem);
+
+$fullWidth: var(--innerVW);
+$navHeight: 3rem;
+$mainPadding: calc(3rem + 1vw);
+$smallPadding: calc(1rem + 1vw);
+// $headerHeight: 3rem;
+$transition: .6s;
+$transitionDurationForDebugging: 10s;
+
+:root {
+  // need to change how I'm doing this
+  --innerVW: 100vw;
+}
+
+
+
+
+//
+// Colors
+//
+@function color($color-name, $color-variant:null) {
+  @if ($color-variant !=null) {
+     @return map-get(map-get($colors, $color-name), $color-variant);
+  }
+  @else {
+     @return map-get($colors, $color-name);
+  }
+}
+
+$colors: (
+  highlight: #00d8ff,
+  light: #d2f8ff,
+  mid: #70bfce,
+  dark: #2d6b77,
+  darker: #1a4850,
+  background: #0b151d
+);
+
+
+
+
+@mixin full-width {
+  width: 100vw;
+  width: $fullWidth;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: calc(#{$fullWidth} * -.5);
+  margin-right: calc(#{$fullWidth} * -.5);
+}
+
+.full-width {
+  @include full-width;
+}

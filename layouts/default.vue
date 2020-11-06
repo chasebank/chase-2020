@@ -1,29 +1,18 @@
 <template>
-  <div>
+  <div id="app">
+    <header>
+      <canvas id="stars"></canvas>
+    </header>
+
     <Nuxt />
+
+    <footer>
+
+    </footer>
   </div>
 </template>
 
-<style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
+<style lang="scss">
 *,
 *::before,
 *::after {
@@ -31,32 +20,91 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+html {
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+body {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/personal-site--bg.jpg);
+  --headerHeight: 21.5vw;
+  background-size: calc(var(--headerHeight) * .79);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  // force scrollbar to prevent content jump
+  overflow-y: scroll;
+  
+  @media (max-width: $smallScreen) {
+    --headerHeight: 65vw;
+  }
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+body,
+#__nuxt,
+#__layout,
+#app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+#app {
+  // background-color: red;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: var(--innerVW);
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/personal-site--header.png) no-repeat top left;
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: var(--headerHeight);
+  
+  canvas {
+    // background-color: red;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mask-image: url(https://assets.codepen.io/106403/personal-site--header-mask--alpha.png);
+    mask-size: cover;
+    opacity: .75;
+    // mix-blend-mode: overlay;
+  }
+}
+
+main {
+  flex-grow: 1;
+  // keep over fixed pos header
+  z-index: 1;
+  
+  display: grid;
+  place-items: center center;
+  //
+  // DEBUG
+  //
+  // display: none;
+}
+
+#content {
+  // background-color: cyan;
+  width: calc(100% - 3rem);
+  max-width: 40rem;
+}
+
+section {
+  // background-color: yellow;
+  display: block;
+}
+
+footer {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/personal-site--footer.png);
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: var(--headerHeight);
 }
 </style>
