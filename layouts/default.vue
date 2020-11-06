@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/personal-site--bg.jpg);
+  background-image: url('~assets/images/personal-site--bg.jpg');
   --headerHeight: 21.5vw;
   background-size: calc(var(--headerHeight) * .79);
   background-attachment: fixed;
@@ -58,7 +58,7 @@ header {
   position: fixed;
   top: 0;
   width: var(--innerVW);
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/personal-site--header.png) no-repeat top left;
+  background: url('~assets/images/personal-site--header.png') no-repeat top left;
   background-position: top left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -69,7 +69,7 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    mask-image: url(https://assets.codepen.io/106403/personal-site--header-mask--alpha.png);
+    mask-image: url('~assets/images/personal-site--header-mask--alpha.png');
     mask-size: cover;
     opacity: .75;
     // mix-blend-mode: overlay;
@@ -101,7 +101,7 @@ section {
 }
 
 footer {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/personal-site--footer.png);
+  background-image: url('~assets/images/personal-site--footer.png');
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
