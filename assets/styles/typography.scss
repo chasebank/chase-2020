@@ -1,3 +1,7 @@
+:root {
+  font-size: clamp(1rem, 1.5vw, calc(1.5rem + 1.5vw));
+}
+
 body {
   font-family:
     'Source Sans Pro',
@@ -8,10 +12,263 @@ body {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  font-size: clamp(1rem, 1.5vw, calc(1.5rem + 1.5vw));
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #70bfce;
+}
+
+h4 {
+  color: #70bfce;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  text-shadow: 0 .05em .15em black;
+  // filter: drop-shadow(0 .05em .15em black)
+}
+
+h1,
+h2,
+h3 {
+  font-family: TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+  padding-left: calc(25% - #{$mainPadding});
+  letter-spacing: -.05em;
+}
+
+h1 {
+  padding-right: calc(25% - #{$mainPadding});
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  span:last-child {
+    align-self: stretch;
+    flex: 1 0 100%;
+    display: flex;
+    align-items: flex-end;
+
+    &:after {
+      position: relative;
+      bottom: .23em;
+      flex-grow: 1;
+      margin-left: -.2em;
+      content: '';
+      height: 1px;
+      background: linear-gradient(to right, rgba(color(darker),0), currentColor .1em, color(darker), rgba(color(darker),0));
+    }
+  }
+}
+
+h1,
+h2 {
+  // @include full-width;
+  
+  span:first-child {
+    position: relative;
+    color: #70bfce;
+    
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -5%;
+      width: 110%;
+      height: 100%;
+      background-color: rgba(color(highlight), .2);
+      z-index: -1;
+    }
+    
+    &:after {
+      display: block;
+      content: attr(data-content);
+      position: absolute;
+      top: 0;
+      height: 100%;
+      // fix right side cut off
+      padding-right: .1em;
+      color: transparent;
+      background: linear-gradient(to top, white 10%, rgba(color(mid),0) 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+    }
+  }
+  
+  span:nth-child(2) {
+    font-size: .8em;
+    margin-top: -.65em;
+    margin-left: .7em;
+    color: #70bfce;
+    z-index: -1;
+  }
+}
+
+.header--home {
+  padding-left: calc(25% - #{$mainPadding});
+  padding-right: calc(25% - #{$mainPadding});
+  display: inline-grid;
+  grid-template-columns: 1fr minmax(0px, 1.35em);
+  
+  // TODO does this stuff also need to be on the normal H1?
+  
+  span {
+    grid-column: 1;
+    
+    &:first-child {
+      justify-self: start;
+    }
+    
+    &:nth-child(2) {
+      margin-left: 1em;
+    }
+    
+    &:nth-child(3) {
+      grid-column: 1 / span 2;
+      text-align: right;
+      padding-right: 1em;
+      margin-top: -.5em;
+      font-size: .7em;
+      color: #2d6b77;
+      z-index: -2;
+    }
+    
+    &:nth-child(4) {
+      grid-column: 1 / span 2;
+      text-align: right;
+      margin-top: -.6em;
+      font-size: .6em;
+      color: #1a4850;
+      z-index: -3;
+    }
+  }
+  
+  @media (max-width: $smallScreen) {
+    // undo inline
+    display: grid;
+    justify-items: center;
+    padding: unset;
+    grid-template-columns: 1fr;
+    
+    span {
+      &:nth-child(1) {
+        justify-self: unset;
+      }
+      
+      &:nth-child(2) {
+        margin-left: unset;
+        position: relative;
+
+        &:before {
+          display: block;
+          content: '';
+          position: absolute;
+          bottom: .1em;
+          right: 0;
+          height: .04em;
+          width: 97%;
+          background-color: currentColor;
+        }
+      }
+      
+      &:nth-child(3) {
+        padding-right: 2.5rem;
+      }
+      
+      &:nth-child(4) {
+        padding-left: 2.5rem;
+      }
+    }
+  }
+}
+
+p,
+ul {
+  font-family: 'Montserrat',Arial,Helvetica,sans-serif;
+  // @include responsive-property("font-size", 15px, 18px);
+  // font-size: clamp(1rem, 1.5vw, calc(1.5rem + 1.5vw));
+  color: color(light);
+  line-height: 2;
+}
+
+a {
+  // increase hitbox
+  padding: .3em;
+  margin: -.3em;
+  position: relative;
+  color: white;
+  text-decoration-color: color(highlight);
+  transition-property: text-decoration-color, color, background-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  background-color: rgba(color(highlight), .1);
+  
+  &:visited {
+    color: inherit;
+    text-decoration-color: color(highlight);
+  }
+  
+  &:hover {
+    color: white;
+    text-decoration-color: color(highlight);
+    background-color: rgba(color(highlight), .2);
+  }
+  
+  &:active {
+    
+  }
+  
+  &:focus {
+    color: white;
+    text-decoration-color: color(highlight);
+    outline-color: color(highlight);
+    
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+#content ul:not([class]) {
+  list-style: none;
+  padding-left: 0;
+  
+  li {
+    // background-color: pink;
+    position: relative;
+    padding-left: 1.5em;
+    margin-left: -1.5em;
+    display: flex;
+  }
+  
+  li:before {
+    // background-color: yellow;
+    position: absolute;
+    top: .25em;
+    left: 0;
+    content: "\25FC";
+    font-size: .75em;
+    color: color(highlight);
+  }
 }

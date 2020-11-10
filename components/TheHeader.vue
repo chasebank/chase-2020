@@ -92,35 +92,35 @@ export default {
 
 <style lang="scss" scoped>
 header {
+  display: grid;
   position: fixed;
   top: 0;
   width: var(--innerVW);
   min-height: var(--headerHeight);
-  
+  mask-image: url('~assets/images/personal-site--header--alpha.png');
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: 0% -1.25rem;
+
   &:before {
     display: block;
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-image: url('~assets/images/personal-site--header.png');
+    background-image: url('~assets/images/personal-site--header--alpha.png');
     background-position: top left;
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: -1;
   }
 }
 
+header:before,
 canvas {
-  // background-color: red;
-  position: absolute;
   width: 100%;
   height: 100%;
-  mask-image: url('~assets/images/personal-site--header-mask--alpha.png');
-  mask-size: cover;
-  // opacity: .75;
-  // mix-blend-mode: overlay;
+  grid-area: 1 / 1;
+}
+
+canvas {
+  mask-image: linear-gradient(to top, black 20%, rgba(black,.75));
 }
 </style>

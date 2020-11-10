@@ -1,30 +1,31 @@
 <template>
   <main>
-    <div class="content">
-      <Logo />
+    <div id="content">
+      <h1 class="header--home"><span data-content="CHASE">CHASE</span><span>WHITESIDE</span><span>Designer</span><span>Developer</span></h1>
 
-      <h1 class="title">
-        chase-2020
-      </h1>
+      <h2>
+        <span data-content="Portfolio">Portfolio</span>
+        <span>Projects</span>
+      </h2>
 
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <h3>
+        This is a Heading 3
+      </h3>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita beatae consequatur id commodi, aut numquam repudiandae iure, sequi fugit eaque animi <a href="">optio aperiam impedit officiis</a> similique laborum eum dignissimos. Est, impedit quis. Minima!
+      </p>
+
+      <h4>
+        This is a Heading 4
+      </h4>
+
+      <ul>
+        <li>This is a list item</li>
+        <li>This is a list item</li>
+        <li>This is a list item</li>
+        <li>This is a list item</li>
+      </ul>
 
       <!-- <LongContent/> -->
     </div>
