@@ -1,10 +1,14 @@
 <template>
   <div id="app">
-    <header>
+    <!-- <header>
       <canvas id="stars"></canvas>
-    </header>
+    </header> -->
+
+    <TheHeader/>
 
     <Nuxt />
+
+    <TheFooter/>
 
     <footer>
 
@@ -54,27 +58,6 @@ body,
   // background-color: red;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  width: var(--innerVW);
-  background: url('~assets/images/personal-site--header.png') no-repeat top left;
-  background-position: top left;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: var(--headerHeight);
-  
-  canvas {
-    // background-color: red;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    mask-image: url('~assets/images/personal-site--header-mask--alpha.png');
-    mask-size: cover;
-    opacity: .75;
-    // mix-blend-mode: overlay;
-  }
-}
 
 main {
   flex-grow: 1;
@@ -98,13 +81,5 @@ main {
 section {
   // background-color: yellow;
   display: block;
-}
-
-footer {
-  background-image: url('~assets/images/personal-site--footer.png');
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: var(--headerHeight);
 }
 </style>
