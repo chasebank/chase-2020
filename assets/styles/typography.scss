@@ -228,24 +228,25 @@ a {
     color: inherit;
     text-decoration-color: color(highlight);
   }
-  
-  &:hover {
+
+  @mixin hoverFocus {
     color: white;
     text-decoration-color: color(highlight);
     background-color: rgba(color(highlight), .2);
-  }
-  
-  &:active {
-    
-  }
-  
-  &:focus {
-    color: white;
-    text-decoration-color: color(highlight);
-    outline-color: color(highlight);
-    
+
     &:before {
       opacity: 1;
+    }
+  }
+
+  &.focus-visible {
+    @include hoverFocus();
+    outline-color: color(highlight);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include hoverFocus();
     }
   }
 }

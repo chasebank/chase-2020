@@ -18,6 +18,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: "https://unpkg.com/focus-visible", type: 'text/javascript', charset: 'utf-8'}
     ]
   },
 

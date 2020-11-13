@@ -175,8 +175,7 @@ footer {
       transition-property: color,filter;
     }
 
-    &:hover,
-    &:focus {
+    @mixin hoverFocus {
       background-color: rgba(var(--primaryColor),1);
 
       .social-contact--text {
@@ -195,6 +194,16 @@ footer {
 
       .social-connect--icon-logo {
         fill: rgb(var(--primaryColor));
+      }
+    }
+
+    &.focus-visible {
+      @include hoverFocus();
+    }
+    
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        @include hoverFocus();
       }
     }
   }
@@ -278,8 +287,7 @@ footer {
     fill: var(--primaryColorDark);
   }
 
-  &:hover,
-  &:focus {
+  @mixin hoverFocus {
     .social-contact--text {
       color: black;
       text-shadow: none;
@@ -288,6 +296,16 @@ footer {
 
     .social-connect--icon-squircle {
       fill: var(--primaryColorDark)!important;
+    }
+  }
+
+  &.focus-visible {
+    @include hoverFocus();
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include hoverFocus();
     }
   }
 }

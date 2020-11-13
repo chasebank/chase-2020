@@ -2,7 +2,7 @@
   <main>
     <div id="content">
       <h1 class="header--home"><span data-content="CHASE">CHASE</span><span>WHITESIDE</span><span>Designer</span><span>Developer</span></h1>
-
+      
       <h2>
         <span data-content="Portfolio">Portfolio</span>
         <span>Projects</span>
@@ -45,5 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-  
+button {
+  background: cyan;
+}
 </style>
