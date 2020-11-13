@@ -20,14 +20,14 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: "https://unpkg.com/focus-visible", type: 'text/javascript', charset: 'utf-8'}
+      { src: 'https://unpkg.com/focus-visible', type: 'text/javascript', charset: 'utf-8'}
     ]
   },
 
   styleResources: {
     scss: [
       './assets/styles/*.scss',
-      "./assets/styles/_bitsnpieces.scss"
+      './assets/styles/_bitsnpieces.scss'
     ]
   },
 
@@ -48,7 +48,10 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ["@nuxtjs/style-resources"],
+  modules: [
+    '@nuxtjs/style-resources',
+    '@nuxt/content'
+  ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

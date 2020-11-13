@@ -3,6 +3,10 @@
     <div id="content">
       <h1 class="header--home"><span data-content="CHASE">CHASE</span><span>WHITESIDE</span><span>Designer</span><span>Developer</span></h1>
       
+      <pre>
+        {{ projects }}
+      </pre>
+
       <h2>
         <span data-content="Portfolio">Portfolio</span>
         <span>Projects</span>
@@ -41,6 +45,16 @@ export default {
   data: () => ({
     title: 'hero there',
   }),
+
+  async asyncData ({ $content, params }) {
+    const projects = await $content('projects', params.slug)
+        // .only(['title'])
+        .fetch()
+
+    return {
+      projects
+    }
+  }
 }
 </script>
 
