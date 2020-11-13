@@ -129,13 +129,16 @@ footer {
 #social-connect {
   // background-color: red;
   grid-area: 1 / 1;
+  align-self: center;
   list-style: none!important;
-  margin-top: 0;
+  padding-left: .5rem;
+  margin-top: 5vw;
   margin-left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   justify-content: space-evenly;
+  align-items: center;
   //
   // Debug
   //
@@ -145,8 +148,7 @@ footer {
 .social-connect--option {
   // background-color: red;
   position: relative;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: .75rem 1rem;
   font-size: clamp(10px, 1rem, 16px);
   display: flex;
   align-items: center;
