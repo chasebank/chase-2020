@@ -291,7 +291,7 @@ footer {
     .social-contact--text {
       color: black;
       text-shadow: none;
-      filter: none;
+      filter: none!important;
     }
 
     .social-connect--icon-squircle {
