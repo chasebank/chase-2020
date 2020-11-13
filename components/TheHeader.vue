@@ -68,7 +68,8 @@ export default {
     let tiles = []
 
     for (let i = 0; i < (ctxWidth * 10) * scale; i++) {
-      let size = Math.random() > .95 ? 1 : gsap.utils.random(.4, 1, .1);
+      let size = Math.random() > .98 ? 1.2 : gsap.utils.random(.2, .9, .1);
+      // console.log(size)
       // let color = Math.random() > .8 ? `yellow` : `cyan`;
       let tile = createTile(gsap.utils.random(0, ctxWidth), 0, size, `#00647c`);
       tiles.push(tile)
