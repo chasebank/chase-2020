@@ -31,6 +31,15 @@ export default {
     ]
   },
 
+  responsiveLoader: {
+    format: 'jpg',
+    min: 250,
+    max: 1000,
+    steps: 3,
+    adapter: require("responsive-loader/sharp"),
+    quality: 75
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     'normalize.css/normalize.css'

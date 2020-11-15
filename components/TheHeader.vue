@@ -98,7 +98,7 @@ header {
   top: 0;
   width: var(--innerVW);
   min-height: var(--headerHeight);
-  mask-image: url('~assets/images/personal-site--header--alpha.png');
+  mask-image: url('~assets/images/personal-site--header--alpha.png?disable=true');
   mask-repeat: no-repeat;
   mask-size: cover;
   mask-position: 0% -1.25rem;
@@ -106,7 +106,7 @@ header {
   &:before {
     display: block;
     content: '';
-    background-image: url('~assets/images/personal-site--header--alpha.png');
+    background-image: url('~assets/images/personal-site--header--alpha.png?disable=true');
     background-position: top left;
     background-size: cover;
     background-repeat: no-repeat;

@@ -36,7 +36,7 @@ html {
 }
 
 body {
-  background-image: url('~assets/images/personal-site--bg.jpg');
+  background-image: url('~assets/images/personal-site--bg.jpg?disable=true');
   --headerHeight: 21.5vw;
   background-size: calc(var(--headerHeight) * .79);
   background-attachment: fixed;

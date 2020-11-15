@@ -1,4 +1,4 @@
-<template>
+?disable=true<template>
   <footer>
     <ul id="social-connect">
       <li class="social-connect--option">
@@ -117,7 +117,7 @@ footer {
     grid-area: 1 / 1;
     width: 100%;
     height: 100%;
-    background-image: url('~assets/images/personal-site--header--alpha.png');
+    background-image: url('~assets/images/personal-site--header--alpha.png?disable=true');
     background-position: top left;
     background-size: cover;
     background-repeat: no-repeat;
