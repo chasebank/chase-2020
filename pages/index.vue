@@ -1,16 +1,17 @@
 <template>
   <main>
     <div id="content">
-      <h1 class="header--home"><span data-content="CHASE">CHASE</span><span>WHITESIDE</span><span>Designer</span><span>Developer</span></h1>
-      
-      <pre>
-        {{ projects }}
-      </pre>
+      <h1 class="heading--home"><span data-content="CHASE">CHASE</span><span>WHITESIDE</span><span>Designer</span><span>Developer</span></h1>
 
       <h2>
-        <span data-content="Portfolio">Portfolio</span>
-        <span>Projects</span>
+        <span data-content="Portfolio">Portfolio</span><span>Projects</span>
       </h2>
+
+      <h2 class="heading--link">
+        <nuxt-link to="/portfolio" class="page-link" title="View my portfolio page"><span data-content="Portfolio">Portfolio</span><span>Projects</span></nuxt-link>
+      </h2>
+
+      <ProjectList/>
 
       <h3>
         This is a Heading 3
@@ -42,19 +43,19 @@ import pageMixin from '~/mixins/page-mixin.vue'
 export default {
   mixins: [pageMixin],
 
-  data: () => ({
-    title: 'hero there',
-  }),
-
   async asyncData ({ $content, params }) {
     const projects = await $content('projects', params.slug)
-        // .only(['title'])
+        .only(['title'])
         .fetch()
 
     return {
       projects
     }
-  }
+  },
+
+  data: () => ({
+    
+  }),
 }
 </script>
 

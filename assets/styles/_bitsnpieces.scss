@@ -15,8 +15,7 @@ $transition: .6s;
 $transitionDurationForDebugging: 10s;
 
 :root {
-  // need to change how I'm doing this
-  --innerVW: 100vw;
+  --innerVW: calc(100vw - var(--scrollbarWidth));
 }
 
 
@@ -46,16 +45,13 @@ $colors: (
 
 
 
-@mixin full-width {
-  width: 100vw;
-  width: $fullWidth;
+@mixin fullWidth {
   position: relative;
+  width: var(--innerVW);
   left: 50%;
-  right: 50%;
-  margin-left: calc(#{$fullWidth} * -.5);
-  margin-right: calc(#{$fullWidth} * -.5);
+  margin-left: calc(var(--innerVW) / -2);
 }
 
 .full-width {
-  @include full-width;
+  @include fullWidth;
 }

@@ -1,20 +1,24 @@
 <template>
   <div id="app">
-    <!-- <header>
-      <canvas id="stars"></canvas>
-    </header> -->
-
     <TheHeader/>
 
     <Nuxt />
 
     <TheFooter/>
-
-    <footer>
-
-    </footer>
   </div>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    
+  }),
+
+  mounted() {
+    document.documentElement.style.setProperty('--scrollbarWidth', `${window.innerWidth - document.documentElement.clientWidth}px`);
+  }
+}
+</script>
 
 <style lang="scss">
 *,
@@ -79,7 +83,6 @@ main {
 }
 
 section {
-  // background-color: yellow;
-  display: block;
+  
 }
 </style>

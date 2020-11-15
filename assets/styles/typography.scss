@@ -25,6 +25,7 @@ h1 {
 
 h2 {
   font-size: 3.5rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
@@ -57,7 +58,7 @@ h1 {
   padding-right: calc(25% - #{$mainPadding});
 }
 
-h2 {
+h2:not(.heading--link) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -82,8 +83,6 @@ h2 {
 
 h1,
 h2 {
-  // @include full-width;
-  
   span:first-child {
     position: relative;
     color: #70bfce;
@@ -117,6 +116,7 @@ h2 {
   }
   
   span:nth-child(2) {
+    // position: relative;
     font-size: .8em;
     margin-top: -.65em;
     margin-left: .7em;
@@ -125,7 +125,56 @@ h2 {
   }
 }
 
-.header--home {
+.heading--link {
+  a {
+    // background-color: rgba(yellow,.2);
+    // position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    pointer-events: none;
+    // keep above heading el so that -1 span is also above heading
+    position: relative;
+    z-index: 1;
+    
+    &:before,
+    &:after {
+      display: inline-block;
+      content: '';
+    }
+    
+    &:before {
+      order: 2;
+      flex: 1 0 100%;
+    }
+    
+    &:after {
+      position: relative;
+      bottom: .175em;
+      flex-grow: 1;
+      margin-left: -.1em;
+      height: 1px;
+      background: linear-gradient(to right, rgba(color(darker),0), #70bfce .1em, color(darker), rgba(color(darker),0));
+      align-self: flex-end;
+      order: 4;
+    }
+    
+    span {
+      pointer-events: all;
+    }
+    
+    span:first-child {
+      // background-color: cyan;
+    }
+    
+    span:last-child {
+      // background-color: magenta;
+      order: 3;
+    }
+  }
+}
+
+h1 {
   padding-left: calc(25% - #{$mainPadding});
   padding-right: calc(25% - #{$mainPadding});
   display: inline-grid;
@@ -212,7 +261,7 @@ ul {
   line-height: 2;
 }
 
-a {
+p a {
   // increase hitbox
   padding: .3em;
   margin: -.3em;
