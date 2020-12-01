@@ -3,15 +3,11 @@
     <div id="content">
       <h1 class="heading--home"><span data-content="CHASE">CHASE</span><span>WHITESIDE</span><span>Designer</span><span>Developer</span></h1>
 
-      <h2>
-        <span data-content="Portfolio">Portfolio</span><span>Projects</span>
-      </h2>
-
       <h2 class="heading--link">
         <nuxt-link to="/portfolio" class="page-link" title="View my portfolio page"><span data-content="Portfolio">Portfolio</span><span>Projects</span></nuxt-link>
       </h2>
 
-      <ProjectList/>
+      <anothertest/>
 
       <h3>
         This is a Heading 3

@@ -1,4 +1,4 @@
-?disable=true<template>
+<template>
   <footer>
     <ul id="social-connect">
       <li class="social-connect--option">
