@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxt/content": "^1.10.0",
     "@nuxtjs/style-resources": "^1.0.0",
-    "core-js": "^3.6.5",
+    "core-js": "^3.9.1",
     "focus-visible": "^5.2.0",
     "gsap": "^3.5.1",
     "normalize.css": "^8.0.1",
