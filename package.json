@@ -17,7 +17,7 @@
     "focus-visible": "^5.2.0",
     "gsap": "^3.5.1",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.15.6",
     "nuxt-responsive-loader": "^2.0.1",
     "push-dir": "^0.4.1",
     "sharp": "^0.26.2"
