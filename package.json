@@ -15,7 +15,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "^3.6.5",
     "focus-visible": "^5.2.0",
-    "gsap": "^3.5.1",
+    "gsap": "^3.9.1",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.6",
     "nuxt-responsive-loader": "^2.0.1",
