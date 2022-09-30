@@ -20,7 +20,7 @@
     "nuxt": "^2.14.6",
     "nuxt-responsive-loader": "^2.0.1",
     "push-dir": "^0.4.1",
-    "sharp": "^0.26.2"
+    "sharp": "^0.31.1"
   },
   "devDependencies": {
     "fibers": "^5.0.0",
